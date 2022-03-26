@@ -1,0 +1,5 @@
+bazel-*
+.idea
+**/*.xcodeproj/bazelinstallers/index-import
+*.xcodeproj
+Pods
