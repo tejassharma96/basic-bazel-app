@@ -1,11 +1,10 @@
 load("@build_bazel_rules_ios//rules:framework.bzl", "apple_framework")
-load("@build_bazel_rules_ios//rules:library.bzl", "apple_library")
 load("@build_bazel_rules_ios//rules:app.bzl", "ios_application")
 load("@build_bazel_rules_ios//rules:xcodeproj.bzl", "xcodeproj")
 
 apple_framework(
     name = "UrlGet",
-    srcs = glob(["UrlGet/*.h", "UrlGet/*.m"], exclude=["UrlGet/main.m"]),
+    srcs = glob(["UrlGet/*.h", "UrlGet/*.m", "UrlGet/*.swift"], exclude=["UrlGet/main.m"]),
     platforms = {"ios": "14.0"},
     visibility = ["//visibility:public"],
     deps = ["//Pods/SDWebImage:SDWebImage"]
